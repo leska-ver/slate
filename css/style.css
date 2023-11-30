@@ -806,8 +806,6 @@ button {
 }
 
 .footer__left-link:hover {
-  border: 1px solid var(--color-brilliantRose);
-  padding: 8px;
   color: var(--color-brilliantRose);
 }
 
