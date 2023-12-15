@@ -277,15 +277,13 @@ button {
 /*** // Шапка header-1580px***/
 
 
-/*** Главная main-1580px***/
-
-
-.main {
+/*** Главная hero-1580px***/
+.hero {
   position: relative;
   padding: 69px 0 65%;
 }
 
-.main::before {
+.hero::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -294,11 +292,11 @@ button {
   background: url("../img/background-01.png") center / cover no-repeat;
 }
 
-.main__container .pattern {
+.hero__container .pattern {
   margin-bottom: 94px;
 }
 
-.main__container .pattern__h2 {
+.hero__container .pattern__h2 {
   margin: 0 auto 33px;
   width: 650px;
   font-size: clamp(52px, 6vw, 80px);
@@ -306,11 +304,11 @@ button {
   letter-spacing: 1.7px;
 }
 
-.main__container .pattern__desc {
+.hero__container .pattern__desc {
   width: 837px; 
 }
 
-.main__buttons {
+.hero__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,16 +316,16 @@ button {
   width: 537px;
 }
 
-.main__blue {
+.hero__blue {
   margin-right: 33px;
   border: 1px solid transparent;
   background-color: var(--color-dodgerBlue);
 }
 
-.main__gray {
+.hero__gray {
   background-color: transparent;
 }
-/*** // Главная main-1580px***/
+/*** // Главная hero-1580px***/
 
 
 /*** Возможности opportunities-1580px***/
@@ -676,19 +674,15 @@ button {
   display: flex;
   /*Для выравнивание карточек answer__card*/
   flex-direction: column;
-  margin: 0 22px 24px 0;
-  padding: 37px 33px 35px 40px;
+  margin: 0 23px 21px 0;
+  padding: 37px 33px 38px 40px;
   border-radius: 10px;
   border: 1px solid var(--color-alto);
   box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.15);
-  width: 431px;  
+  width: 430.5px;  
   font-size: 16px;  
   line-height: 24px;
   letter-spacing: 0px;
-}
-
-.answer__item:first-child {
-  padding-right: 60px;
 }
 
 .answer__item:nth-child(2n) {
@@ -939,7 +933,12 @@ button {
 
 
 @media (max-width: 1024px) {
-  .main__container .pattern__desc, .opportunities__container .pattern__desc, .extensions__container .pattern__desc, .gallery__container .pattern__desc {
+  .header__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+
+  .hero__container .pattern__desc, .opportunities__container .pattern__desc, .extensions__container .pattern__desc, .gallery__container .pattern__desc {
     width: 90%;
   }
 
@@ -998,6 +997,10 @@ button {
     width: 48%;
   }  
 
+  .answer__item br {
+    display: none;
+  }
+
 
   .footer__container {
     max-width: 100%;
@@ -1035,31 +1038,31 @@ button {
   }
 
 
-  .main {
+  .hero {
     padding: 53px 0 380px;
   }
 
-  .main__container .pattern {
+  .hero__container .pattern {
     position: relative;
     margin-bottom: 81px;
     z-index: 2;
   }
 
-  .main__container .pattern__h2 {
+  .hero__container .pattern__h2 {
     width: 100%;
   }
 
-  .main__buttons {
+  .hero__buttons {
     display: block;
     width: 100%;
   }
 
-  .main__buttons .btn {
+  .hero__buttons .btn {
     display: block;
     margin: 0 auto;
   }
 
-  .main__buttons .btn:not(:last-child) {
+  .hero__buttons .btn:not(:last-child) {
     margin-bottom: 21px;
   }
 
@@ -1218,7 +1221,6 @@ button {
   }
 
   .footer__left {
-    width: 100%;
     margin: 0 0 75px;
   }
 
@@ -1241,20 +1243,20 @@ button {
 }  
 
 @media (max-width: 626px) {   
-  .main {
+  .hero {
     padding: 47px 0 93%;
   }  
 
-  .main::before {
+  .hero::before {
     height: 43%;
     background: url("../img/background-01mobili.png") center / cover no-repeat;
   }
 
-  .main__container .pattern {
+  .hero__container .pattern {
     margin-bottom: 68px;
   }
 
-  .main__container .pattern__h2 {
+  .hero__container .pattern__h2 {
     margin-bottom: 25px;
   }
 
@@ -1355,10 +1357,9 @@ button {
 
 
   .answer__list {
-    display: block;
     width: 70%;
   }
-  
+
   .answer__item {
     margin-right: 0;
     padding: 38px 60px 38px 38px;
@@ -1369,16 +1370,17 @@ button {
     margin-bottom: 22px;
   }
 
-  .answer__item:first-child {
-    padding-right: 60px;
-  }
-
   .answer__item:nth-child(3) {
     padding-right: 80px;
   }
 
   .answer__item:nth-child(4) {
     padding-right: 45px;
+  }
+
+
+  .footer {
+    padding-top: 120px;
   }
 
   .footer__left {
@@ -1450,17 +1452,17 @@ button {
   }
 
 
-  .main__container .pattern {
+  .hero__container .pattern {
     margin-bottom: 40px;
   }
 
-  .main__container .pattern__h2 {
+  .hero__container .pattern__h2 {
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: 0.2px;
   }
 
-  .main__container .pattern__desc, .opportunities__container .pattern__desc, .extensions__container .pattern__desc, .gallery__container .pattern__desc {
+  .hero__container .pattern__desc, .opportunities__container .pattern__desc, .extensions__container .pattern__desc, .gallery__container .pattern__desc {
     width: 100%;
     font-size: 17px;
     line-height: 1.7;
@@ -1468,12 +1470,12 @@ button {
     text-align: start;
   }
 
-  .main__buttons .btn {
+  .hero__buttons .btn {
     padding: 14px;
     font-size: 14px;
   }
 
-  .main__buttons .btn:not(:last-child) {
+  .hero__buttons .btn:not(:last-child) {
     margin-bottom: 25px;
   }
 
@@ -1617,12 +1619,11 @@ button {
     width: 100%;
   }
   
-  .answer__item:first-child, .answer__item:nth-child(2n), .answer__item:nth-child(3), .answer__item:nth-child(4) {
+  .answer__item {
     padding: 20px;
   }
 
   .answer__flex {
-    justify-content: space-around;
     margin-bottom: 12px;
   }
 
