@@ -289,10 +289,12 @@ button {
   bottom: 0;
   width: 100%;
   height: 65%;
-  background: url("../img/background-01.png") center / cover no-repeat;
+  background: url("../img/background-01.png") center / contain no-repeat;
 }
 
 .hero__container .pattern {
+  position: relative;
+  z-index: 1;
   margin-bottom: 94px;
 }
 
@@ -828,6 +830,11 @@ button {
 
 .footer__right-link svg {
   margin-right: 9px;
+  -webkit-transition: fill .4s ease-in-out;
+  -ms-transition: fill .4s ease-in-out;
+  -moz-transition: fill .4s ease-in-out;
+  -o-transition: fill .4s ease-in-out;
+  transition: fill .4s ease-in-out;
 }
 
 .footer__right-link:focus  {
@@ -840,10 +847,12 @@ button {
 
 .footer__right-link:hover  {
   color: var(--color-brilliantRose);
+  transition-duration: 0s;
 }
 
 .footer__right-link:hover svg path {
   fill: var(--color-brilliantRose);
+  transition-duration: 0s;
 }
 
 .footer__right-link:active, .footer__right-link:active svg path {
